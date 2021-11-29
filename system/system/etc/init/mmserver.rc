@@ -1,0 +1,11 @@
+#
+#   MMS Binder service
+#
+on property:ro.vendor.mtk_pq_support=2
+    start mmserver
+
+service mmserver /system/bin/mmserver
+    class main
+    user system
+    group system graphics
+    disabled

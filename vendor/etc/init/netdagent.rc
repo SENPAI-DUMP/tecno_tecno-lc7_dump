@@ -1,0 +1,17 @@
+service netdagent /vendor/bin/netdagent
+    class late_start
+    #socket netdagent stream 0660 root system
+    user system
+    group net_admin net_raw system misc
+    capabilities NET_ADMIN NET_RAW
+
+on init
+    setprop ro.vendor.net.upload.benchmark.default blocking
+
+on property:persist.vendor.operator.optr=OP12
+    write /proc/sys/net/optr 12
+
+# When ftp is active mode, if nf_conntrack_helper is default value--0,
+# ftp download/upload session will fail with usb tethering, because ftp
+# response msg doesnot change ip to 192.168.42.xx manually
+    write /proc/sys/net/netfilter/nf_conntrack_helper 1

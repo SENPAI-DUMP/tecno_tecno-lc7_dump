@@ -1,0 +1,14 @@
+# full_lc7_h6116-user 11 RP1A.200504.003 24717 release-keys
+- manufacturer: 
+- platform: mt6761
+- codename: TECNO-LC7
+- flavor: full_lc7_h6116-user
+- release: 11
+- id: RP1A.200504.003
+- incremental: BCF-200703V218
+- tags: release-keys
+- fingerprint: TECNO/LC7-GL/TECNO-LC7:11/RP1A.200504.003/BCF-200703V218:user/release-keys
+- is_ab: false
+- brand: TECNO
+- branch: full_lc7_h6116-user-11-RP1A.200504.003-24717-release-keys
+- repo: tecno_tecno-lc7_dump
